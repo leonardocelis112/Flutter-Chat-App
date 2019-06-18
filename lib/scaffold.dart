@@ -13,7 +13,7 @@ class _MyChatAppState extends State<MyChatApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /* home: Scaffold(
+      home: Scaffold(
         appBar: AppBar(
           title: Text("Chat App"),
           actions: <Widget>[
@@ -26,7 +26,18 @@ class _MyChatAppState extends State<MyChatApp> {
           ],
         ),
         body: ListView(
-          children: <Widget>[ChatHead(), ChatHead(), ChatHead()],
+          children: <Widget>[
+            ChatHead(
+              friendName: "Thanos",
+              lastMessage: "I will do the snap",
+              messageTime: DateTime.now(),
+            ),
+            ChatHead(
+              friendName: "Capitain america",
+              lastMessage: "Please tell Thanos not to do it",
+              messageTime: DateTime.now(),
+            ),
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -51,8 +62,8 @@ class _MyChatAppState extends State<MyChatApp> {
             print("Add was pressed");
           },
         ),
-      ), */
-      home: ChatView(),
+      ),
+      //home: ChatView(),
     );
   }
 }
